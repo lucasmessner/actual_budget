@@ -1,13 +1,13 @@
-ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base:latest
+ARG BUILD_FROM
 FROM $BUILD_FROM
 
-# Install dependencies
-RUN apk add --no-cache python3 py3-pip
+# Install Python for example server
+RUN apk add --no-cache python3
 
-# Set working directory
+# Set working directory to persistent data folder
 WORKDIR /data
 
-# Copy run script
+# Copy the startup script
 COPY run.sh /
 RUN chmod a+x /run.sh
 
