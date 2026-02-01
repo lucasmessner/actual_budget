@@ -2,10 +2,13 @@
   "name": "Actual Budget",
   "version": "1.0.0",
   "slug": "actual_budget",
-  "description": "Home Assistant Add-on for Actual Budget",
+  "description": "Home Assistant add-on for Actual Budget",
   "arch": ["aarch64", "amd64", "armv7", "armhf", "i386"],
   "startup": "services",
   "boot": "auto",
+  "ports": {
+    "3000/tcp": 3000
+  },
   "options": {},
   "schema": {}
 }
